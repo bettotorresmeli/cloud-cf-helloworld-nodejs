@@ -13,5 +13,12 @@ pipeline {
         mtaBuild(script: this)
       }
     }
+
+    stage('deploy') {
+      steps {
+        cloudFoundryDeploy(script: this)
+      }
+    }
+
   }
 }
