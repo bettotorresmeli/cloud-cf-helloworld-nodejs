@@ -9,4 +9,4 @@ cloudFoundryDeploy:
     cloudFoundry:
       org: '73523cbbtrial'
       space: 'dev'
-      credentialsId: btorres16@gmail.com'
+      credentialsId: 'btorres16@gmail.com'
