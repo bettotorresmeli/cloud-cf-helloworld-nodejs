@@ -4,13 +4,6 @@ version: 1.0.0
 description: A Hello World sample application
 provider: SAP Sample generator
 
-build-parameters:
-  before-all:
-   - builder: custom
-     commands:
-      - npm ci
-      - npx -p @sap/cds-dk cds build --production
-
 modules:
   - name: piper.node.hello.world
     type: nodejs
