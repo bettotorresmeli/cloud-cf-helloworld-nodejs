@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('prepare') {
       steps {
-        sh 'npm install -g mbt '
+        sh 'npm install -g mbt'
         checkout scm
         setupCommonPipelineEnvironment(script: this)
       }
