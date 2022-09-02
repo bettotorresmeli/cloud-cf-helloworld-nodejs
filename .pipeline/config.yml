@@ -3,3 +3,10 @@ steps:
   mtaBuild:
     buildTarget: 'CF'
     
+cloudFoundryDeploy:
+    deployTool: 'mtaDeployPlugin'
+    deployType: 'standard'
+    cloudFoundry:
+      org: '597fcb40-b52a-434a-9797-b24e41816acf'
+      space: 'dev'
+      credentialsId: 'Qazplm123!_'
