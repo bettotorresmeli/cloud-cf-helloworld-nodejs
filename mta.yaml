@@ -1,62 +1,9 @@
-_schema-version: "3.2"
-ID: FioriDemo
-description: Fiori elements app
-version: 0.0.1
+_schema-version: 2.1.0
+ID: com.sap.piper.node.hello.world
+version: 1.0.0
+description: A Hello World sample application
+provider: SAP Sample generator
 modules:
-- name: piper.node.hello.world
-  type: nodejs
-  path: .
-  requires:
-  - name: FioriDemo-destination-service
-    parameters:
-      content-target: true
-  - name: FioriDemo-repo-host
-    parameters:
-      service-key:
-        name: FioriDemo-repo-host-key
-  - name: FioriDemo-uaa
-    parameters:
-      service-key:
-        name: FioriDemo-uaa-key
-  parameters:
-    content:
-      instance:
-        destinations:
-        - Name: FioriDemo_repo_host
-          ServiceInstanceName: FioriDemo-html5-srv
-          ServiceKeyName: FioriDemo-repo-host-key
-          sap.cloud.service: FioriDemo
-        - Authentication: OAuth2UserTokenExchange
-          Name: FioriDemo_uaa
-          ServiceInstanceName: FioriDemo-xsuaa-srv
-          ServiceKeyName: FioriDemo-uaa-key
-          sap.cloud.service: FioriDemo
-        existing_destinations_policy: update
-  build-parameters:
-    no-source: true
-- name: FioriDemo-destination-service
-  type: org.cloudfoundry.managed-service
-  parameters:
-    config:
-      HTML5Runtime_enabled: true
-      init_data:
-        instance:
-          destinations:
-          - Authentication: NoAuthentication
-            Name: ui5
-            ProxyType: Internet
-            Type: HTTP
-            URL: https://ui5.sap.com
-          existing_destinations_policy: update
-      version: 1.0.0
-    service: destination
-    service-name: FioriDemo-destination-service
-    service-plan: lite
-- name: FioriDemo-repo-host
-  type: org.cloudfoundry.managed-service
-  parameters:
-    service: html5-apps-repo
-    service-name: FioriDemo-html5-srv
-    service-plan: app-host
-parameters:
-  deploy_mode: html5-repo
+  - name: piper.node.hello.world
+    type: nodejs
+    path: .
