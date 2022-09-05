@@ -20,6 +20,7 @@ pipeline {
     stage('deploy') {
       steps {
         cloudFoundryDeploy(script: this)
+        sh 'cf push --random-route'
       }
     }
 
