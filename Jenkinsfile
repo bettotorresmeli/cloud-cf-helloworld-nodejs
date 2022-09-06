@@ -13,13 +13,17 @@ pipeline {
 
     stage('build') {
       steps {
-        mtaBuild(script: this)
+        sh ''' npm install
+
+'''
       }
     }
 
     stage('deploy') {
       steps {
-        cloudFoundryDeploy(script: this)
+        sh '''cf push
+
+'''
       }
     }
 
