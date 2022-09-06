@@ -8,7 +8,7 @@
     "body-parser": "1.17.2"
   },
   "engines": {
-    "node": "12.22.12",
+    "node": "18.5.0",
     "npm": "7.5.2"
   },  
   "scripts": {
